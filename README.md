@@ -28,7 +28,7 @@ note :varchar(2000)  (default:NULL)
 animation :longtext  (default:NULL)
 title :varchar(50)  (default:NULL)
 music :longblob  (default:NULL)
-status :int  NN(default:0)*/
+status :int  NN(default:0)
 ```
 
 # 4.下载包
