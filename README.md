@@ -4,7 +4,7 @@
 # 1.前置条件
 node.js  v18.12.1 ,  mysql (mysql)  v8.0.32
 # 2.包管理工具 pnpm 安装
-输入命令：`<npm install pnpm -g>`
+输入命令： `npm install pnpm -g`
 # 3.修改mysql密码及创建数据库
 打开文件包的mysql.js，修改pw为你mysql的密码值
 在此说明Mysql的配置：
@@ -32,13 +32,13 @@ status :int  NN(default:0)*/
 ```
 
 # 4.下载包
-打开文件包后在有package.json的那一个目录下输入命令  `<pnpm i>`
+打开文件包后在有package.json的那一个目录下输入命令:    `pnpm i`
 
 # 5.下载gcc和gdb
 下载运行编译C++的配件即可
 
 # 6.启动服务器
-在server1.js的目录下启动命令行，输入命令  `<node server1.js>`
+在server1.js的目录下启动命令行，输入命令:    `node server1.js`
 
 # 7.打开开始页面
 打开test.html（最好不要用IE打开，可以用microsoft edge）,即可启动系统，切换右上角的学生教师端，则可实现功能
