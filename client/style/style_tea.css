@@ -1,0 +1,214 @@
+.myGlyphMarginClass {
+	background: red;
+}
+.myContentClass {
+	background: lightblue;
+}
+.myGlyphMarginClass1 {
+	background: white;
+}
+.myContentClass1 {
+	background: white;
+}
+.picture_design{
+	display: flex;
+}
+
+.nodebook_design{
+	display: flex;
+}
+
+.display_design{
+	position: relative;
+	width: 400px;
+	height: 400px;
+	border:1px solid grey;
+	margin: 0px 20px;
+	background-color: #d8dee4;
+}
+.display_control_design{
+	width:200px;
+	background-color: #d8dee9;
+}
+/*.shownode_design{
+	width: 500px;
+	height: 280px;
+	border:1px solid grey;
+	margin: 0px 20px;
+	
+}*/
+
+.blank_design{
+	height: 30px;
+}
+.shownode_design{
+	height: 280px;
+	width: 400px;
+	margin: 0px 20px;
+	background-color: #d8dee4;
+}
+
+.designnode_display{
+	height: 260px;
+	width: 395px;
+	margin: 0px 0px;
+	font-size: 15px;
+	
+}
+.node_control_design{
+	width: 200px;
+	background-color: #d8dee9;
+}
+
+.element{
+	position: absolute;
+	width: 30px;
+	height: 15px;
+	background-color: orange;
+	cursor: move;
+	user-select: none;
+	border:2px solid grey;
+	left: 40px;
+	top:50px;
+	font-size: 15px;
+}
+
+#width_set,#height_set{
+	margin: 0px 20px;
+}
+
+#pic_design{
+	margin:0px 20px 10px 100px;
+	
+}
+
+#ordsetk{
+	width: 40px;
+	margin: 0px 70px;
+}
+
+#color_set{
+	margin: 0px 20px;
+}
+
+#text_set{
+	margin: 0px 20px;
+}
+
+#new_design{
+	margin: 5px 0px 5px 60px;
+}
+#save_pic{
+	margin: 0px 0px 5px 40px;
+}
+#empty{
+	margin: 0px 60px;
+}
+#preview{
+	margin: 5px 0px 5px 60px;
+}
+#pic_post{
+	margin: 0px 60px;
+}
+#postnotes{
+	margin: 0px 120px;
+}
+
+#path_mus,#note_order,#cpp_path,#case_title,#case_ord{
+	margin: 0px 20px;
+}
+#case_menu{
+	margin: 0px 0px 0px 20px;
+}
+#play{
+	margin: 0px 0px;
+}
+
+.btd{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 580px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd:hover{
+	background-color: coral;
+}
+
+
+.btd3{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 580px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd3:hover{
+	background-color: coral;
+}
+
+.btd2{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 480px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd2:hover{
+	background-color: coral;
+}
+
+.btd1{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 380px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd1:hover{
+	background-color: coral;
+}

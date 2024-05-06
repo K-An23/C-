@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+	<link rel="stylesheet" type="text/css" href="./style/style_stu.css">
+	<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+	<link rel="icon" href="./study.ico" type="image/x-icon" >
+	<title>欢迎访问学生端！</title>
+</head>
+
+
+<body>
+
+
+<div class="headtitle">
+	<div class="img">
+		<img src="./study.ico" alt="教学辅助系统" title="冲冲冲！" width="30px" height="30px">
+	</div>
+	<div class="title">
+		源程序交互式演示系统(学生端)
+	</div>
+	<div class="option">
+		<form action="http://127.0.0.1:64/option" method="post" class="example1">
+			<input type="radio" name="who" value="学生端" checked="checked">学生端
+			<input type="radio" name="who" value="教师端">教师端
+			<input type="submit" name="sub1" value="确认">
+		</form>
+	</div>
+	
+</div>
+
+<hr color="grean"  />
+
+<div class="text">
+	<div id="left">
+		<div id="container" style="width:800px;height:400px;border:0.1px solid grey"></div>
+		<script src="./loader.js"></script>
+		<script src="./index/index_1.js"></script>
+
+		<div class="control">
+			<div class="one">
+				<div class="open">
+					<input type="file" name="fleUpload" id="fleUpload" class="fleUpload" onChange="fileUpload_ReadTxtFile(this.files);">
+				</div>
+				<button class="btd" id="btd" >调试</button>
+				<!-- <label for="line_num">输入断点行号：</label>
+				<input type="text" id="line_num" name="line_num" > -->
+				<button class="btd1" id="btd1" hidden="hidden">单步调试</button>
+				<button class="btd2" id="btd2" hidden="hidden">next</button>
+				<button class="btd3" id="btd3" hidden="hidden" onclick="cancel()">取消调试</button>
+				<button class="btn" id="btt" >Run</button>
+			</div>                                      
+			<!-- //以上的代码繁琐应该可以简化，主要是不想再研究浮动还有定位的东西，所以用了几个盒子把它括了起来，方便定位（好像表单的东西我没法直接用CSS直接操作，所以我括了一个盒子。。。。。。） -->
+			<form action="http://127.0.0.1:64/user" method="post" class="example2">
+
+				输入保存路径名：<input type="text" id="place" name="userplace">
+				输入文件名：<input type="text" id="fn" name="filename">
+				<input type="hidden" id="hid" value="" name="hide">
+				<input type="submit" id="give" value="保存" onclick="save()">
+				<!-- //这里还未进行容错性设计，如果路径及文件名有误，不会提示你，而且最后你也找不到那个文件。路径名的命名必须保证最后一个符号是"/"，否则路径名和文件名连接后是有问题的 -->
+			</form>
+		</div>
+
+		<div class="output" id="output">
+			输出：
+		</div>
+	</div>
+
+	<div id="right">
+		<div class="picture">
+			<div class="display" id="display">
+			
+			</div>
+			<div class="display_control">
+				
+				<label for="teanote_order">动画帧所在序号:</label>
+					<input type="text" id="teanote_order" name="teanote_order" value="1">
+					<label for="case_order">输入要查看的案例序号：</label>
+					<input type="text" id="case_order" name="case_order" value="1">
+				<button id="get_case" >获取案例库</button>	
+				<button id="download" >打开案例</button>
+					<label for="casetil">案例题目：</label>
+				<input type="text" id="casetil" name="casetil" >
+				<button id="watchtea" >显示老师笔记</button>
+				<textarea name="teanote" wrap="hard" id="teanote" class="teanote_display"> </textarea>
+				<audio src="./test.mp3" preload="auto" controls></audio>
+					
+
+				
+				
+			</div>
+
+		</div>
+		<div class="blank">
+			<button id="checkpic" >展示图形</button>
+			<button id="check_next" hidden="hidden">展示下一步</button>
+			<button id="check_last" hidden="hidden">展示上一步</button>
+
+		</div>
+
+		<div class="nodebook">
+
+			<div class="shownode">
+				笔记区
+			<textarea name="writenode" wrap="hard" id="writenode" class="writenode_display"> </textarea>
+			</div>
+			<div class="node_control">
+				
+				<button id="btn1" >查看笔记目录</button>
+				<form action="http://127.0.0.1:64/savedb" method="post" class="example3">
+					<input type="hidden" id="hid1" name="hid1">
+					<!-- 上面的代码其实就是借了它一手，主要是不想研究怎么用一行代码获取textarea的文本值了 -->
+					<label for="theme_name">输入本次笔记的题目：</label>
+					<input type="text" id="theme_name" name="theme_name">
+					<input type="submit" id="savenotes" name="sub2" value="保存笔记" onclick="savenote()">
+				<!-- <form action="http://127.0.0.1:64/deletedb" method="post" class="example4">
+					<input type="submit" id="delete" name="delete" value="查看笔记" >
+				</form> -->
+					<label for="delete_num">待删除的笔记序号：</label>
+					<input type="text" id="delete_num" name="delete_num">
+				</form>
+				<button id="btn2">删除笔记</button>
+				<label for="show_num">待查看的笔记序号：</label>
+				<input type="text" id="show_num" name="show_num">
+				<button id="btn3">查看笔记</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+

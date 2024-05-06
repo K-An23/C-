@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+	<link rel="stylesheet" type="text/css" href="./style/style_tea.css">
+	<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+	<link rel="icon" href="./study.ico" type="image/x-icon" >
+	<title>欢迎访问教师端！</title>
+</head>
+
+
+<body>
+
+
+<div class="headtitle">
+	<div class="img">
+		<img src="./study.ico" alt="教学辅助系统" title="冲冲冲！" width="30px" height="30px">
+	</div>
+	<div class="title">
+		源程序交互式演示系统(教师端)
+	</div>
+	<div class="option">
+		<form action="http://127.0.0.1:64/option" method="post" class="example1">
+			<input type="radio" name="who" value="学生端" >学生端
+			<input type="radio" name="who" value="教师端" checked="checked">教师端
+			<input type="submit" name="sub1" value="确认">
+		</form>
+	</div>
+	
+</div>
+
+<hr color="grean"  />
+
+<div class="text">
+	<div id="left">
+		<div id="container" style="width:800px;height:400px;border:0.1px solid grey"></div>
+		<script src="./loader.js"></script>
+		
+
+		<div class="control">
+			<div class="one">
+				<div class="open">
+					<input type="file" name="fleUpload" id="fleUpload" class="fleUpload" onChange="fileUpload_ReadTxtFile(this.files);">
+				</div>
+				<button class="btd" id="btd" >调试</button>
+				<!-- <label for="line_num">输入断点行号：</label>
+				<input type="text" id="line_num" name="line_num" > -->
+				<button class="btd1" id="btd1" hidden="hidden">单步调试</button>
+				<button class="btd2" id="btd2" hidden="hidden">next</button>
+				<button class="btd3" id="btd3" hidden="hidden" onclick="cancel()">取消调试</button>
+				<button class="btn" id="btt" >Run</button>
+			</div>                                      
+			<!-- //以上的代码繁琐应该可以简化，主要是不想再研究浮动还有定位的东西，所以用了几个盒子把它括了起来，方便定位（好像表单的东西我没法直接用CSS直接操作，所以我括了一个盒子。。。。。。） -->
+			<form action="http://127.0.0.1:64/user" method="post" class="example2">
+
+				输入保存路径名：<input type="text" id="place" name="userplace">
+				输入文件名：<input type="text" id="fn" name="filename">
+				<input type="hidden" id="hid" value="" name="hide">
+				<input type="submit" id="give" value="保存" onclick="save()">
+				<!-- //这里还未进行容错性设计，如果路径及文件名有误，不会提示你，而且最后你也找不到那个文件。路径名的命名必须保证最后一个符号是"/"，否则路径名和文件名连接后是有问题的 -->
+			</form>
+		</div>
+
+		<div class="output" id="output">
+			输出：
+		</div>
+	</div>
+
+	<div id="right">
+		<div class="picture_design">
+			<div class="display_design" id="display_design">
+			
+			<!-- <div class="element" id="element">ceshi</div> -->
+			
+			</div>
+
+			<div class="display_control_design">
+				<!-- <form action="http://127.0.0.1:64/savepic" method="post" class="example3"> -->
+					<label for="ordsetk">图形帧次序（从1开始）</label>
+					<input type="text" id="ordsetk" name="ordsetk" value = "1">
+
+					<label for="width_set">设置块形元素的宽度（px）</label>
+					<input type="text" id="width_set" name="width_set">
+
+					<label for="height_set">设置块形元素的高度（px）</label>
+					<input type="text" id="height_set" name="height_set">
+
+					<label for="color_set">设置块形元素的颜色(rgb)</label>
+					<input type="text" id="color_set" name="color_set">
+
+					<label for="text_set">设置块形元素内的文本</label>
+					<input type="text" id="text_set" name="text_set">
+
+					<button id="new_design" >新建</button>
+					<button id="save_pic" >保存图形帧</button>
+					<!-- <input type="submit" id="txt_set" name="txt_set"> -->
+					<button id="empty" onclick="emp()">清空</button>
+
+					<button id="preview" >预览</button>
+					<button id="preview_last" hidden="hidden">预览上一个</button>
+					<button id="preview_next" hidden="hidden">预览下一个</button>
+					
+					
+				<!-- </form> -->
+
+			</div>
+
+		</div>
+		<div class="blank_design">
+		</div>
+		<div class="nodebook_design">
+
+			<div class="shownode_design">
+				笔记区
+			<textarea name="designnode" wrap="hard" id="designnode" class="designnode_display"> </textarea>
+			</div>
+			<div class="node_control_design">
+			<form action="http://127.0.0.1:64/postdb" method="post" class="example3">
+				<label for="note_order">输入该笔记的序号：</label>
+				
+				<input type="text" id="note_order" name="note_order">
+				<input type="hidden" id="hidd1" name="hidd1">
+				<input type="submit" id="postnotes" name="sub2" value="发布笔记" onclick="postnote()">
+			</form>
+			<label for="path_mus">输入音频所在的完整路径：</label>
+			<input type="text" id="path_mus" name="path_mus" >
+			<label for="cpp_path">输入cpp文件的完整路径：</label>
+			<input type="text" id="cpp_path" name="cpp_path" >
+			<label for="case_title">输入案例标题：</label>
+			<input type="text" id="case_title" name="case_title" >
+			<label for="case_ord">输入案例序号：</label>
+			<input type="text" id="case_ord" name="case_ord" >
+			<button id="case_menu" >获取案例目录</button>
+			<button id="play" >案例发布</button>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+</body>
+
+
+
+</html>"
+<!-- 受不了了，直接放最后，嗯。。。不报错了 -->
+<!-- <script type="text/javascript" src="/index_2.js"></script> -->
+<script src="./index/index_2.js"></script>

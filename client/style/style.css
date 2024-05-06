@@ -1,0 +1,102 @@
+.myGlyphMarginClass {
+	background: red;
+}
+.myGlyphMarginClass1 {
+	background: blue;
+}
+.myContentClass {
+	background: lightblue;
+}
+.text{
+		display: flex;
+}
+
+#left{
+	width:800px;
+}
+
+.headtitle{
+	display: flex;
+	height: 30px;
+	background-position: center center;
+}
+
+.img{
+	width: 50px;
+}
+
+.title{
+	font-weight: bolder;
+	font-size: 20px;
+	font-style: normal;
+	font-family: "Microsoft YaHei";
+}
+
+#output{
+	width: 800px;
+	height: 250px;
+	border:1px solid grey;
+	font-size: 15px;
+	opacity: 0.5;
+}
+.one{
+	display: flex;
+}
+.btn{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 700px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btn:hover{
+	background-color: coral;
+}
+
+
+.open{
+	width: 0px;
+	height: 40px;
+	position: relative;
+	left:0px;
+	
+}
+
+
+/*#right{
+	width: 800px;
+	height: 693px;
+	border:1px solid grey;
+	margin: 0px 20px;
+	background-color: #d8dee4;
+}
+*/
+@keyframes myAnim{
+	0%{
+		font-size: 20px;
+	}
+	50%{
+		font-size: 15px;
+	}
+	100%{
+		font-size: 10px;
+	}
+}
+
+
+.option{
+	position: absolute;
+	right: 30px;
+	top: 10px;
+}

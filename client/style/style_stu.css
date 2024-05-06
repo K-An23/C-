@@ -1,0 +1,213 @@
+.myGlyphMarginClass {
+	background: red;
+}
+.myContentClass {
+	background: lightblue;
+}
+.myGlyphMarginClass1 {
+	background: white;
+}
+.myContentClass1 {
+	background: white;
+}
+.picture{
+	display: flex;
+}
+
+.nodebook{
+	display: flex;
+}
+
+.display{
+	position: relative;
+	width: 400px;
+	height: 400px;
+	border:1px solid grey;
+	margin: 0px 20px;
+	background-color: #d8dee4;
+}
+
+
+.display_control{
+	position: relative;
+	height:400px;
+	width:200px;
+	background-color: #d8dee9;
+}
+#teanote{
+	width:180px;
+	height:200px;
+	font-size: 15px;
+}
+
+/*.shownode{
+	width: 500px;
+	height: 280px;
+	border:1px solid grey;
+	margin: 0px 20px;
+	
+}*/
+
+.blank{
+	height: 30px;
+}
+.shownode{
+	height: 280px;
+	width: 400px;
+	margin: 0px 20px;
+	background-color: #d8dee4;
+}
+.writenode_display{
+	height: 260px;
+	width: 395px;
+	margin: 0px 0px;
+	font-size: 15px;
+	
+}
+
+.node_control{
+	width: 200px;
+	background-color: #d8dee9;
+}
+
+#btn1{
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	color: white;
+	font-size: 20px;
+	margin: 0px 0px 10px 0px;
+
+}
+#btn1:hover{
+	background-color: coral;
+}
+
+#savenotes{
+	margin:0px 20px 10px 100px;
+}
+
+#btn2{
+	margin: 0px 20px 10px 100px;
+}
+
+#btn3{
+	margin: 0px 20px 10px 100px;
+}
+
+#checkpic{
+	margin:0px 20px;
+}
+
+#teanote_order{
+	width: 20px;
+	height: 15px;
+	margin: 0px 20px;
+}
+
+#watchtea{
+	margin: 0px 40px;
+}
+
+audio{
+	position: absolute;
+	height: 20px;
+	width: 220px;
+	left: 0px;
+	top: 380px;
+}
+
+#download{
+	margin: 5px 5px 5px 20px;
+}
+
+.btd{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 580px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd:hover{
+	background-color: coral;
+}
+
+
+.btd3{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 580px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd3:hover{
+	background-color: coral;
+}
+
+.btd2{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 480px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd2:hover{
+	background-color: coral;
+}
+
+.btd1{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: blueviolet;
+	border-color: blueviolet;
+	position: absolute;
+	left: 380px;
+	top: 458px;
+
+	color: white;
+	font-size: 20px;
+	animation: myAnim 2s linear 0s 1;
+	animation-play-state: paused;
+
+
+}
+
+.btd1:hover{
+	background-color: coral;
+}
