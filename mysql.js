@@ -1,4 +1,4 @@
-const pw = "280097460Syn"
+const pw = ""
 export default pw
 
 /*在此说明Mysql的配置：
