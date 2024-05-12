@@ -37,12 +37,12 @@ status :int  NN(default:0)
 # 5.下载gcc和gdb
 下载运行编译C++的配件即可
 
-展示效果：
-1.学生端
-![image](https://github.com/K-An23/teaching-C-system/edit/master/student_client.png)
-
 # 6.启动服务器
 在server1.js的目录下启动命令行，输入命令:    `node server1.js`
 
 # 7.打开开始页面
 打开test.html（最好不要用IE打开，可以用microsoft edge）,即可启动系统，切换右上角的学生教师端，则可实现功能
+
+展示效果：
+1.学生端
+![image](https://github.com/K-An23/teaching-C-system/edit/master/student_client.png)
