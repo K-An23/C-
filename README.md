@@ -43,6 +43,9 @@ status :int  NN(default:0)
 # 7.打开开始页面
 打开test.html（最好不要用IE打开，可以用microsoft edge）,即可启动系统，切换右上角的学生教师端，则可实现功能
 
-展示效果：
-1.学生端
+# 展示效果：
+## 1.学生端
 ![image](https://github.com/K-An23/teaching-C-system/blob/master/student_client.png)
+
+## 2.教师端
+![image](https://github.com/K-An23/teaching-C-system/blob/master/teacher_server.png)
