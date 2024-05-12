@@ -45,4 +45,4 @@ status :int  NN(default:0)
 
 展示效果：
 1.学生端
-![image](https://github.com/K-An23/teaching-C-system/edit/master/student_client.png)
+![image](https://github.com/K-An23/teaching-C-system/master/student_client.png)
