@@ -37,6 +37,10 @@ status :int  NN(default:0)
 # 5.下载gcc和gdb
 下载运行编译C++的配件即可
 
+展示效果：
+1.学生端
+![image](https://github.com/K-An23/teaching-C-system/edit/master/student_client.png)
+
 # 6.启动服务器
 在server1.js的目录下启动命令行，输入命令:    `node server1.js`
 
